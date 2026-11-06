@@ -51,6 +51,19 @@ end
 ### Servidor Web (`instalar_web.sh`)
 Se instala Apache, PHP, Git y se clona la aplicación. Para automatizar la conexión con el servidor de base de datos **(Criterio CC4)**, se utiliza el comando `sed` sustituyendo los valores genéricos de `config.php` por la IP privada de la máquina aislada (`192.168.50.20`):
 
+
+### Servidor de Base de Datos (`instalar_db.sh`)
+Se instala MariaDB y se realizan dos ajustes de red fundamentales:
+1. **Permitir conexiones entrantes:** Se modifica el `bind-address` a `0.0.0.0` para que acepte peticiones desde el servidor web.
+2. **Aislamiento total:** Se elimina la salida a Internet borrando la ruta por defecto, dejando la máquina únicamente accesible desde la red interna.
+
+```bash
+
+# Modificación de escucha
+sed -i "s/bind-address.*/bind-address = 0.0.0.0/" /etc/mysql/mariadb.conf.d/50-server.cnf
+
+# Tras crear la BBDD, usuario y tabla, se elimina la salida a Internet
+ip route del default dev eth0
 ```bash
 sed -i "s/'localhost'/'192.168.50.20'/" /var/www/html/config.php
 sed -i "s/'database_name_here'/'lamp_db'/" /var/www/html/config.php
