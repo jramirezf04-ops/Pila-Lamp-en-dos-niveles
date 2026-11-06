@@ -1,6 +1,6 @@
 # Pila-Lamp-en-dos-niveles
 
-## 1. Introducción y Arquitectura (CC1)
+## 1. Introducción y Arquitectura
 El objetivo de esta práctica es desplegar una aplicación web separando la infraestructura en dos niveles para mejorar la seguridad.
 
 *   **Servidor Web (Apache/PHP):** Tiene salida a Internet mediante NAT para descargar paquetes y está expuesto al anfitrión mediante reenvío de puertos (8080 -> 80).
@@ -12,7 +12,7 @@ El objetivo de esta práctica es desplegar una aplicación web separando la infr
 * **3. Servidor de Base de Datos (IP 192.168.50.20):** Almacena la información. Está totalmente aislado de Internet por seguridad.
 
 
-## 2. Demostración de Funcionamiento (CC5)
+## 2. Demostración de Funcionamiento
 
 En el siguiente enlace se puede ver un screencast demostrando el correcto funcionamiento de la aplicación, añadiendo un usuario que se guarda en la base de datos aislada:
 **https://drive.google.com/file/d/1QGe3ys1O0aHaB-FDurGEURpmQoJcXLLx/view?usp=sharing**
@@ -46,7 +46,7 @@ Vagrant.configure("2") do |config|
 end
 ```
 
-## 4. Aprovisionamiento y Ajustes Automáticos (CC2 y CC4)
+## 4. Aprovisionamiento y Ajustes Automáticos
 
 ### Servidor Web (`instalar_web.sh`)
 Se instala Apache, PHP, Git y se clona la aplicación. Para automatizar la conexión con el servidor de base de datos **(Criterio CC4)**, se utiliza el comando `sed` sustituyendo los valores genéricos de `config.php` por la IP privada de la máquina aislada (`192.168.50.20`):
