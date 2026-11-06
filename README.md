@@ -13,6 +13,7 @@ El objetivo de esta práctica es desplegar una aplicación web separando la infr
 
 
 ## 2. Demostración de Funcionamiento (CC5)
+
 En el siguiente enlace se puede ver un screencast demostrando el correcto funcionamiento de la aplicación, añadiendo un usuario que se guarda en la base de datos aislada:
 **https://drive.google.com/file/d/1QGe3ys1O0aHaB-FDurGEURpmQoJcXLLx/view?usp=sharing**
 
