@@ -11,6 +11,7 @@ El objetivo de esta práctica es desplegar una aplicación web separando la infr
 * **2. Servidor Web (IP 192.168.50.10):** Recibe tu petición y se comunica por una red privada con la base de datos.
 * **3. Servidor de Base de Datos (IP 192.168.50.20):** Almacena la información. Está totalmente aislado de Internet por seguridad.
 
+
 ## 2. Demostración de Funcionamiento (CC5)
 En el siguiente enlace se puede ver un screencast demostrando el correcto funcionamiento de la aplicación, añadiendo un usuario que se guarda en la base de datos aislada:
 **https://drive.google.com/file/d/1QGe3ys1O0aHaB-FDurGEURpmQoJcXLLx/view?usp=sharing**
